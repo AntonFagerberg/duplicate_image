@@ -30,7 +30,7 @@ This will create a binary called "duplicate_image" which you can run on all syst
 The threshold, 0.1 in the example, must be a floating-poing number. 0.0 is a perfect match and 1.0 is entirely different. Perfect matches will always be moved!
 
 ### Other
-The [metric](http://www.imagemagick.org/script/command-line-options.php#metric) used is "RMSE". The comparison is very CPU-demanding which motivates parallelisation. The number of concurrent Elixir processes will be determined by the Erlang setting "schedulers_online" which normally amounts to the number of CPU-cores (or CPU-cures * 2 if hyper-threading is used).
+The [metric](http://www.imagemagick.org/script/command-line-options.php#metric) used is "RMSE". The comparison is very slow and CPU-demanding which motivates parallelisation. The number of concurrent Elixir processes will be determined by the Erlang setting "schedulers_online" which normally amounts to the number of CPU-cores (or CPU-cures * 2 if hyper-threading is used).
 
 ### License
 This program is free software: you can redistribute it and/or modify
